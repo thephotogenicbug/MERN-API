@@ -2,7 +2,7 @@ const Form = require('../models/FormModel')
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 
-// Post Product
+// Post 
 exports.newForm = catchAsyncErrors(async (req, res, next) => {
   const { name, email, mobile, message } = req.body;
 
@@ -18,7 +18,7 @@ exports.newForm = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// Get Product
+// Get
 exports.getForm = catchAsyncErrors(async (req, res, next) => {
   const forms = await Form.find();
 
