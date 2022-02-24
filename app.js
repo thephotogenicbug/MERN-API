@@ -14,6 +14,8 @@ app.get("/", (req, res) => {
   res.send("api is running...");
 });
 
+const product = require('./routes/ProductRoutes')
+app.use('/api/v1', product)
 
 //middleware for error
 app.use(errorMiddleware);
